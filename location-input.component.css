@@ -1,0 +1,297 @@
+/* Location Input Component CSS with New Color Palette */
+/* Primary colors: #251B37, #372948, #FFCACA, #FFECEF */
+
+.location-input-container {
+  background-color: #FFECEF; /* Light background */
+  border: 2px solid #372948; /* Medium purple border */
+  border-radius: 8px;
+  padding: 16px;
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+
+.location-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.location-input {
+  background-color: #FFECEF; /* Light background */
+  color: #251B37; /* Dark text */
+  border: 2px solid #372948; /* Medium purple border */
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 1em;
+  width: 100%;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.location-input:focus {
+  border-color: #FFCACA; /* Accent color on focus */
+  background-color: #FFECEF;
+  box-shadow: 0 0 8px rgba(255, 202, 202, 0.4);
+  transform: scale(1.02);
+}
+
+.location-input:hover {
+  border-color: #FFCACA; /* Accent color on hover */
+  background-color: #FFECEF;
+}
+
+.location-input::placeholder {
+  color: #372948; /* Medium purple for placeholder */
+  opacity: 0.7;
+}
+
+.location-input:disabled {
+  background-color: #372948; /* Secondary background when disabled */
+  color: #FFECEF; /* Light text when disabled */
+  border-color: #251B37; /* Dark border when disabled */
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.input-icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #372948; /* Medium purple for icons */
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+.location-input:focus + .input-icon {
+  color: #FFCACA; /* Accent color when input is focused */
+}
+
+.search-button {
+  background-color: #FFCACA; /* Accent background */
+  color: #251B37; /* Dark text */
+  border: 2px solid #FFCACA;
+  padding: 12px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  min-width: 100px;
+}
+
+.search-button:hover {
+  background-color: #251B37; /* Dark background on hover */
+  color: #FFCACA; /* Accent text on hover */
+  border-color: #FFCACA;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 27, 55, 0.3);
+}
+
+.search-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(37, 27, 55, 0.3);
+}
+
+.clear-button {
+  background-color: #372948; /* Secondary background */
+  color: #FFECEF; /* Light text */
+  border: 2px solid #372948;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: all 0.3s ease;
+}
+
+.clear-button:hover {
+  background-color: #FFECEF; /* Light background on hover */
+  color: #372948; /* Dark text on hover */
+  border-color: #372948;
+}
+
+/* Loading Spinner */
+.spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #FFECEF; /* Light border */
+  border-radius: 50%;
+  border-top-color: #FFCACA; /* Accent color for spinner */
+  animation: spin 1s ease-in-out infinite;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #372948; /* Secondary background */
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.loading-text {
+  color: #FFECEF; /* Light text */
+  font-size: 0.9em;
+  margin-left: 8px;
+}
+
+/* Results Container */
+.results-container {
+  background-color: #251B37; /* Primary dark background */
+  border: 2px solid #372948; /* Medium purple border */
+  border-radius: 6px;
+  margin-top: 12px;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(37, 27, 55, 0.2);
+}
+
+.result-item {
+  background-color: #372948; /* Secondary background */
+  color: #FFECEF; /* Light text */
+  padding: 12px 16px;
+  border-bottom: 1px solid #251B37; /* Dark separator */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.result-item:last-child {
+  border-bottom: none;
+}
+
+.result-item:hover {
+  background-color: #FFCACA; /* Accent background on hover */
+  color: #251B37; /* Dark text on hover */
+  transform: translateX(4px);
+}
+
+.result-item:active {
+  background-color: #FFECEF; /* Light background when clicked */
+  color: #251B37; /* Dark text when clicked */
+}
+
+.result-icon {
+  color: #FFCACA; /* Accent color for icons */
+  font-size: 1.1em;
+  min-width: 20px;
+}
+
+.result-item:hover .result-icon {
+  color: #251B37; /* Dark icon on hover */
+}
+
+.result-text {
+  flex: 1;
+}
+
+.result-main {
+  font-weight: 600;
+  font-size: 1em;
+  margin-bottom: 2px;
+}
+
+.result-detail {
+  font-size: 0.85em;
+  opacity: 0.8;
+}
+
+.no-results {
+  background-color: #372948; /* Secondary background */
+  color: #FFECEF; /* Light text */
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+}
+
+.error-state {
+  background-color: #372948; /* Secondary background */
+  color: #FFCACA; /* Accent color for error */
+  padding: 16px;
+  border-radius: 6px;
+  border-left: 4px solid #FFCACA; /* Accent border */
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.error-icon {
+  color: #FFCACA; /* Accent color */
+  font-size: 1.2em;
+}
+
+/* Recent searches */
+.recent-searches {
+  background-color: #FFECEF; /* Light background */
+  border: 1px solid #372948; /* Medium purple border */
+  border-radius: 6px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.recent-searches-title {
+  color: #251B37; /* Dark text */
+  font-size: 0.9em;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.recent-item {
+  background-color: #FFECEF;
+  color: #372948; /* Medium purple text */
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 4px;
+  font-size: 0.9em;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.recent-item:hover {
+  background-color: #FFCACA; /* Accent background on hover */
+  color: #251B37; /* Dark text on hover */
+  border-color: #372948; /* Medium purple border */
+}
+
+.recent-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .location-input-container {
+    padding: 12px;
+  }
+  
+  .location-input-wrapper {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .search-button {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .results-container {
+    max-height: 250px;
+  }
+  
+  .result-item {
+    padding: 10px 12px;
+  }
+}

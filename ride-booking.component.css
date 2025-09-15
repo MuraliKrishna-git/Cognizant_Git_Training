@@ -1,0 +1,183 @@
+/* Ride Booking Component CSS with New Color Palette */
+/* Primary colors: #251B37, #372948, #FFCACA, #FFECEF */
+
+.ride-booking-container {
+  background-color: #251B37; /* Primary dark background */
+  color: #FFECEF; /* Light text color */
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid #372948; /* Medium purple border */
+  font-family: Arial, sans-serif;
+}
+
+.ride-booking-header {
+  background-color: #372948; /* Secondary background */
+  color: #FFECEF; /* Light text */
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.ride-booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-label {
+  color: #FFCACA; /* Accent color for labels */
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+.form-input {
+  background-color: #FFECEF; /* Light background for inputs */
+  color: #251B37; /* Dark text in inputs */
+  border: 2px solid #372948; /* Medium purple border */
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #FFCACA; /* Accent color on focus */
+  box-shadow: 0 0 5px rgba(255, 202, 202, 0.3);
+  background-color: #FFECEF;
+}
+
+.form-input:hover {
+  border-color: #FFCACA; /* Accent color on hover */
+}
+
+.form-input::placeholder {
+  color: #372948; /* Medium purple for placeholder text */
+  opacity: 0.7;
+}
+
+.btn-primary {
+  background-color: #FFCACA; /* Accent color background */
+  color: #251B37; /* Dark text on button */
+  border: 2px solid #FFCACA;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #251B37; /* Dark background on hover */
+  color: #FFCACA; /* Accent color text on hover */
+  border-color: #FFCACA;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(37, 27, 55, 0.2);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(37, 27, 55, 0.2);
+}
+
+.btn-secondary {
+  background-color: #372948; /* Secondary background */
+  color: #FFECEF; /* Light text */
+  border: 2px solid #372948;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #FFECEF; /* Light background on hover */
+  color: #372948; /* Dark text on hover */
+  border-color: #372948;
+}
+
+.ride-options {
+  background-color: #372948; /* Secondary background */
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+
+.ride-option {
+  background-color: #FFECEF; /* Light background */
+  border: 2px solid #FFCACA; /* Accent border */
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ride-option:hover {
+  background-color: #FFCACA; /* Accent background on hover */
+  color: #251B37; /* Dark text on hover */
+  transform: translateX(5px);
+}
+
+.ride-option.selected {
+  background-color: #FFCACA; /* Accent background when selected */
+  color: #251B37; /* Dark text when selected */
+  border-color: #251B37;
+}
+
+.price-display {
+  background-color: #FFECEF; /* Light background */
+  color: #251B37; /* Dark text */
+  padding: 12px;
+  border-radius: 4px;
+  border: 2px solid #FFCACA; /* Accent border */
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.error-message {
+  background-color: #372948; /* Secondary background */
+  color: #FFCACA; /* Accent color for error text */
+  padding: 10px;
+  border-radius: 4px;
+  border-left: 4px solid #FFCACA;
+  margin-top: 10px;
+}
+
+.success-message {
+  background-color: #FFECEF; /* Light background */
+  color: #251B37; /* Dark text */
+  padding: 10px;
+  border-radius: 4px;
+  border-left: 4px solid #FFCACA; /* Accent border */
+  margin-top: 10px;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .ride-booking-container {
+    padding: 15px;
+  }
+  
+  .ride-booking-header {
+    font-size: 1.3em;
+    padding: 12px;
+  }
+  
+  .form-input, .btn-primary {
+    padding: 10px;
+  }
+}
